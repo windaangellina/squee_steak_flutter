@@ -2,9 +2,9 @@ import 'package:squee_steak_flutter/model/category.dart';
 import 'package:squee_steak_flutter/model/menu.dart';
 
 var listCategory = [
-  Category(id: 1, name: 'Steaks'),
-  Category(id: 2, name: 'Side Dishes'),
-  Category(id: 3, name: 'Drinks'),
+  Category(id: 1, name: 'Steaks', urlPhoto: 'assets/icons/icons_steaks.png'),
+  Category(id: 2, name: 'Side Dishes', urlPhoto: 'assets/icons/icons_side_dish.png'),
+  Category(id: 3, name: 'Drinks', urlPhoto: 'assets/icons/icons_drinks.png'),
 ];
 
 var listMenuDummy = [

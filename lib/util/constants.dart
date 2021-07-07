@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // sebelum bisa import harus add dependencies di pubspec.yaml : intl: "^0.17.0"
 // dibutuhkan untuk NumberFormat
@@ -17,10 +18,13 @@ const appLogoCroppedPath = "assets/logo/app_logo_cropped.png";
 
 
 // misc
+// colors
 // 0xff -> extra so the color works
 const colorYellow = Color(0xffFFE600);
 const colorPink = Color(0xffff7f92);
 const colorGrey = Color(0xff524d4e);
+const colorRedDesert = Color(0xffB74521);
+const colorWhiteCararra = Color(0xffEEEDE9);
 
 String getThousandSeparatorFormat(numValue){
   var numFormat = NumberFormat("#,##0.00", "en_US");
@@ -55,6 +59,11 @@ const textDetailInfoBold = TextStyle(
 const textDetailInfoTitle = TextStyle(
     fontSize: appInfoTitleTextFontSize + 4.0,
     fontWeight: FontWeight.bold
+);
+const textCategoryItem = TextStyle(
+  fontSize: 12.0,
+  fontWeight: FontWeight.bold,
+  color: colorWhiteCararra
 );
 
 // others

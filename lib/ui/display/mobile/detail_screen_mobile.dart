@@ -14,14 +14,52 @@ class DetailMenuMobile extends StatelessWidget{
           child: Container(
             height: size.height,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Image.asset(
-                      menu.urlPhoto,
-                      fit: BoxFit.cover,
-                      height: 400,
+                    Stack(
+                      children: <Widget>[
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Image.asset(
+                              menu.urlPhoto,
+                              fit: BoxFit.cover,
+                              height: 400,
+                            )
+                          ],
+                        ),
+                        SafeArea(
+                            child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 18.0,
+                                    top: 24.0
+                                ),
+                                child: Container(
+                                  alignment: Alignment.topLeft,
+                                  child: Column(
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.black54.withOpacity(0.5),
+                                        child: IconButton(
+                                          icon: Icon(
+                                            Icons.close_outlined,
+                                            color: Colors.white,
+                                            size: appIconSize + 4.0,
+                                          ),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                            )
+                        )
+                      ],
                     )
                   ],
                 ),
@@ -49,7 +87,10 @@ class DetailMenuMobile extends StatelessWidget{
                                   flex: 1,
                                   child: Row(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: starsForRatings(rating: menu.rating)
+                                      children: starsForRatings(
+                                          rating: menu.rating,
+                                          isDetail: true
+                                      )
                                   )
                               ),
                               Expanded(
