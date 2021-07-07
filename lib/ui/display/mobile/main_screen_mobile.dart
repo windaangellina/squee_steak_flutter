@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:squee_steak_flutter/model/category.dart';
 import 'package:squee_steak_flutter/ui/components/app_banner.dart';
 import 'package:squee_steak_flutter/ui/components/category_list.dart';
 import 'package:squee_steak_flutter/ui/components/menu_list.dart';
 import 'package:squee_steak_flutter/util/constants.dart';
 import 'package:squee_steak_flutter/util/data_dummy.dart';
-
 
 class MobileDisplay extends StatefulWidget{
   @override
@@ -21,35 +21,39 @@ class _StateMobileDisplay extends State<MobileDisplay>{
       child: SingleChildScrollView(
           child: Container(
             height: size.height,
+            alignment: Alignment.topLeft,
             child: Column(
               children: <Widget>[
                 AppBanner(),
                 Container(
-                  height: 125,
-                  child: ListView(
-                    // by default arah scrollnya vertical
-                      scrollDirection: Axis.horizontal,
-                      shrinkWrap: true,
-                      children: listCategory.map((category) {
-                        return Padding(
-                            padding: EdgeInsets.all(4.0),
-                            child: InkWell(
-                              onTap: (){
-                                setState(() {
-                                  chosenCategory = category.name;
-                                });
-                              },
-                              child: ItemCategoryMobile(category: category),
-                            )
-                        );
-                      }).toList()
-                  ),
+                  margin: EdgeInsets.symmetric(vertical: 8.0),
+                  height: 75,
+                  child: ListView.builder(
+                    physics: BouncingScrollPhysics(),
+                    itemCount: listCategory.length,
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index){
+                      final Category category = listCategory[index];
+                      return Padding(
+                          padding: EdgeInsets.all(4.0),
+                          child: InkWell(
+                            onTap: (){
+                              setState(() {
+                                chosenCategory = category.name;
+                              });
+                            },
+                            child: ItemCategoryMobile(category: category),
+                          )
+                      );
+                    },
+                  )
                 ),
                 SizedBox(
                   height: 12.0,
                 ),
                 // SectionTitle(title: 'Yummy foods at your fingertips!'),
-                MenuList(listMenu: getAllMenu(category: chosenCategory))
+                MenuList(listMenu: getAllMenu(category: chosenCategory)),
               ],
             ),
           )

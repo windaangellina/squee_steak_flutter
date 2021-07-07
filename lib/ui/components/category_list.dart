@@ -10,8 +10,8 @@ class ItemCategoryMobile extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       width: 100,
-      height: 100,
-      padding: EdgeInsets.all(12.0),
+      height: 75,
+      padding: EdgeInsets.all(6.0),
       alignment: Alignment.center,
       decoration: BoxDecoration(
           color: colorRedDesert,
@@ -22,7 +22,7 @@ class ItemCategoryMobile extends StatelessWidget{
           Image.asset(
             category.urlPhoto,
             fit: BoxFit.cover,
-            height: 75,
+            height: 35,
           ),
           Text(
             category.name,

@@ -14,6 +14,7 @@ class MenuList extends StatelessWidget{
       child: ListView.builder(
         physics: BouncingScrollPhysics(),
         itemCount: listMenu.length,
+        padding: EdgeInsets.only(bottom: 64.0),
         itemBuilder: (context, index){
           final Menu menu = listMenu[index];
           return InkWell(

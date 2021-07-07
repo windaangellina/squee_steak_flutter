@@ -101,8 +101,16 @@ List<Menu> getAllMenu({String? category}){
     return listMenuDummy;
   }
   else{
-    return listMenuDummy.where((menu) =>
-      menu.category.name.toLowerCase() == category.toLowerCase()
-    ).toList();
+    if(category == 'Chef\'s Favorite'){
+      return listMenuChefFavoriteDummy;
+    }
+    else if(category == 'Top Seller'){
+      return listMenuTopSellerDummy;
+    }
+    else{
+      return listMenuDummy.where((menu) =>
+        menu.category.name.toLowerCase() == category.toLowerCase()
+      ).toList();
+    }
   }
 }

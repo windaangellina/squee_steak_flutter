@@ -36,7 +36,7 @@ class AppBanner extends StatelessWidget{
                         children: [
                           CircleAvatar(
                             radius: 20,
-                            backgroundColor: Colors.white.withOpacity(0.5),
+                            backgroundColor: colorPink.withOpacity(0.5),
                             child: IconButton(
                               icon: Icon(Icons.favorite_rounded, color: Colors.white),
                               onPressed: () {
@@ -54,20 +54,5 @@ class AppBanner extends StatelessWidget{
           ],
         )
     );
-    // return Container(
-    //   height: 200,
-    //   color: colorYellow,
-    //   alignment: Alignment.center,
-    //   child: Column(
-    //     crossAxisAlignment: CrossAxisAlignment.stretch,
-    //     children: [
-    //       Image.asset(
-    //         appLogoPath,
-    //         fit: BoxFit.scaleDown,
-    //         height: 200,
-    //       )
-    //     ],
-    //   )
-    // );
   }
 }

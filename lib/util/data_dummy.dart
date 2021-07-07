@@ -5,6 +5,8 @@ var listCategory = [
   Category(id: 1, name: 'Steaks', urlPhoto: 'assets/icons/icons_steaks.png'),
   Category(id: 2, name: 'Side Dishes', urlPhoto: 'assets/icons/icons_side_dish.png'),
   Category(id: 3, name: 'Drinks', urlPhoto: 'assets/icons/icons_drinks.png'),
+  Category(id: 4, name: 'Chef\'s Favorite', urlPhoto: 'assets/icons/icons_chef_hat.png'),
+  Category(id: 5, name: 'Top Seller', urlPhoto: 'assets/icons/icons_top_seller.png'),
 ];
 
 var listMenuDummy = [
@@ -51,4 +53,33 @@ var listMenuDummy = [
   Menu(id: 41, category: listCategory[2], name: 'Café Lattee', rating: 4, price: 24000, urlPhoto: 'assets/drinks/drinks_cafe_latte.png', description: 'Kopi dengan busa susu creamy dan taburan bubuk kayu manis', isLiked: true),
   Menu(id: 42, category: listCategory[2], name: 'Dilmah Tea', rating: 5, price: 20000, urlPhoto: 'assets/drinks/drinks_dilmah_tea.png', description: 'Segelas teh Dilmah', isLiked: true),
   Menu(id: 43, category: listCategory[2], name: 'Santino Coffee', rating: 5, price: 26000, urlPhoto: 'assets/drinks/drinks_santino_coffee.png', description: 'Kopi diseduh dengan Coffee Press', isLiked: true),
+];
+
+var listMenuChefFavoriteDummy = [
+  Menu(id: 14, category: listCategory[0], name: 'Spicy Barbeque Fish', rating: 3, price: 74000, urlPhoto: 'assets/steaks/steaks_spicy_barbeque_fish.jpg', description: 'Steak ikan tengiri dipanggang bumbu pedas'),
+  Menu(id: 2, category: listCategory[0], name: 'OX Tongue Steak', rating: 4, price: 93000, urlPhoto: 'assets/steaks/steaks_ox_tongue_steak.jpg', description: 'Steak lidah'),
+  Menu(id: 3, category: listCategory[0], name: 'Medallion Steak', rating: 5, price: 88000, urlPhoto: 'assets/steaks/steaks_medallion_steak.jpg', description: 'Steak daging cincang dengan keju dan smoked beef'),
+  Menu(id: 8, category: listCategory[0], name: 'Grilled Tenderloin Steak', rating: 5, price: 140000, urlPhoto: 'assets/steaks/steaks_grilled_tenderloin_steak.jpeg', description: 'Steak lulur dalam dipanggang dengan taburan merica hitam'),
+  Menu(id: 33, category: listCategory[2], name: 'Tropical Punch', rating: 4, price: 33000, urlPhoto: 'assets/drinks/drinks_tropicalpunch.png', description: 'Buah peach, nata de coco, semangka, biji selasih, sirup mangga dan lemon tea'),
+  Menu(id: 35, category: listCategory[2], name: 'Toffee Coffee', rating: 5, price: 31000, urlPhoto: 'assets/drinks/drinks_toffee_coffee.jpg', description: 'Kopi, sirup karamel dan whipped cream'),
+  Menu(id: 38, category: listCategory[2], name: 'Mixberry', rating: 5, price: 31000, urlPhoto: 'assets/drinks/drinks_mixberry.png', description: 'Soda bluberi, sirup stroberi, biji selasih dan jelly'),
+  Menu(id: 41, category: listCategory[2], name: 'Café Lattee', rating: 4, price: 24000, urlPhoto: 'assets/drinks/drinks_cafe_latte.png', description: 'Kopi dengan busa susu creamy dan taburan bubuk kayu manis'),
+  Menu(id: 42, category: listCategory[2], name: 'Dilmah Tea', rating: 5, price: 20000, urlPhoto: 'assets/drinks/drinks_dilmah_tea.png', description: 'Segelas teh Dilmah'),
+  Menu(id: 43, category: listCategory[2], name: 'Santino Coffee', rating: 5, price: 26000, urlPhoto: 'assets/drinks/drinks_santino_coffee.png', description: 'Kopi diseduh dengan Coffee Press'),
+
+];
+
+var listMenuTopSellerDummy = [
+  Menu(id: 3, category: listCategory[0], name: 'Medallion Steak', rating: 5, price: 88000, urlPhoto: 'assets/steaks/steaks_medallion_steak.jpg', description: 'Steak daging cincang dengan keju dan smoked beef'),
+  Menu(id: 1, category: listCategory[0], name: 'Tornado steak ', rating: 4, price: 93000, urlPhoto: 'assets/steaks/steaks_tornado_steak.jpg', description: ' Steak lulur dalam dililit smoked beef'),
+  Menu(id: 14, category: listCategory[0], name: 'Spicy Barbeque Fish', rating: 3, price: 74000, urlPhoto: 'assets/steaks/steaks_spicy_barbeque_fish.jpg', description: 'Steak ikan tengiri dipanggang bumbu pedas'),
+  Menu(id: 33, category: listCategory[2], name: 'Tropical Punch', rating: 4, price: 33000, urlPhoto: 'assets/drinks/drinks_tropicalpunch.png', description: 'Buah peach, nata de coco, semangka, biji selasih, sirup mangga dan lemon tea'),
+  Menu(id: 41, category: listCategory[2], name: 'Café Lattee', rating: 4, price: 24000, urlPhoto: 'assets/drinks/drinks_cafe_latte.png', description: 'Kopi dengan busa susu creamy dan taburan bubuk kayu manis'),
+  Menu(id: 42, category: listCategory[2], name: 'Dilmah Tea', rating: 5, price: 20000, urlPhoto: 'assets/drinks/drinks_dilmah_tea.png', description: 'Segelas teh Dilmah'),
+  Menu(id: 43, category: listCategory[2], name: 'Santino Coffee', rating: 5, price: 26000, urlPhoto: 'assets/drinks/drinks_santino_coffee.png', description: 'Kopi diseduh dengan Coffee Press'),
+  Menu(id: 8, category: listCategory[0], name: 'Grilled Tenderloin Steak', rating: 5, price: 140000, urlPhoto: 'assets/steaks/steaks_grilled_tenderloin_steak.jpeg', description: 'Steak lulur dalam dipanggang dengan taburan merica hitam'),
+  Menu(id: 18, category: listCategory[0], name: 'Seoul Rice Steak', rating: 3, price: 90000, urlPhoto: 'assets/steaks/steaks_seoul_rice_steak.jpg', description: 'Nasi steak sapi spesial bumbu khas Korea disajikan dengan sup miso'),
+  Menu(id: 19, category: listCategory[0], name: 'Bangkok Rice Steak', rating: 3, price: 90000, urlPhoto: 'assets/steaks/steaks_bangkok_rice_steak.jpeg', description: 'Nasi steak sapi spesial bumbu khas Thailand disajikan dengan sup miso'),
+  Menu(id: 20, category: listCategory[0], name: 'Chicken Teriyaki Rice Steak', rating: 2, price: 65000, urlPhoto: 'assets/steaks/steaks_teriyaki_rice_steak.jpg', description: 'Daging ayam dengan saus teriyaki disajikan dengan nasi putih'),
+
 ];
