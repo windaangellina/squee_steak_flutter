@@ -66,7 +66,7 @@ class ItemMenuGrid extends StatelessWidget{
             borderRadius: BorderRadius.circular(15.0),
             child: Image.asset(
               menu.urlPhoto,
-              height: size.height * 0.325,
+              height: size.width <= 900 ? size.height * 0.15 : size.height * 0.3,
               fit: BoxFit.cover,
             ),
           ),

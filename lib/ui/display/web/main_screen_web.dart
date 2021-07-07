@@ -1,24 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:squee_steak_flutter/model/category.dart';
-import 'package:squee_steak_flutter/model/menu.dart';
 import 'package:squee_steak_flutter/ui/components/app_banner.dart';
 import 'package:squee_steak_flutter/ui/components/category_list.dart';
 import 'package:squee_steak_flutter/ui/components/custom_appbar.dart';
 import 'package:squee_steak_flutter/ui/components/menu_grid.dart';
-import 'package:squee_steak_flutter/ui/display/web/favorite_screen_web.dart';
-import 'package:squee_steak_flutter/ui/favorite_screen.dart';
-import 'package:squee_steak_flutter/ui/main_screen.dart';
 import 'package:squee_steak_flutter/util/constants.dart';
 import 'package:squee_steak_flutter/util/data_dummy.dart';
 
 class WebDisplay extends StatefulWidget{
+  final int gridCount;
+  WebDisplay({required this.gridCount});
+
   @override
-  _StateWebDisplay createState() => _StateWebDisplay();
+  _StateWebDisplay createState() => _StateWebDisplay(gridCount: gridCount);
 }
 
 class _StateWebDisplay extends State<WebDisplay>{
   String? chosenCategory;
+  final int gridCount;
+  _StateWebDisplay({required this.gridCount});
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +63,7 @@ class _StateWebDisplay extends State<WebDisplay>{
                 padding: const EdgeInsets.all(12.0),
                 child: MenuGrid(
                     listMenu: getAllMenu(category: chosenCategory),
-                    gridCount: 4
+                    gridCount: gridCount
                 ),
               ),
             )
