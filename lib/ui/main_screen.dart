@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:squee_steak_flutter/ui/display/mobile/main_screen_mobile.dart';
+import 'package:squee_steak_flutter/ui/display/web/main_screen_web.dart';
 
 class MainScreen extends StatelessWidget{
   @override
@@ -12,21 +13,10 @@ class MainScreen extends StatelessWidget{
               return MobileDisplay();
             }
             else{
-              return MenuGrid(gridCount: 4);
+              return WebDisplay();
             }
           }
       ),
     );
-  }
-}
-
-class MenuGrid extends StatelessWidget{
-  final int gridCount;
-  MenuGrid({required this.gridCount});
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
   }
 }

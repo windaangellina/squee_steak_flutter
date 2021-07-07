@@ -7,23 +7,30 @@ class AppBanner extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+        height: 200,
+        color: colorYellow,
+        alignment: Alignment.center,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset(
+              appLogoPath,
+              fit: BoxFit.scaleDown,
+              height: 200,
+            )
+          ],
+        )
+    );
+  }
+}
+
+class AppBannerMobile extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
         child: Stack(
           children: <Widget>[
-            Container(
-              height: 200,
-              color: colorYellow,
-              alignment: Alignment.center,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Image.asset(
-                    appLogoPath,
-                    fit: BoxFit.scaleDown,
-                    height: 200,
-                  )
-                ],
-              )
-            ),
+            AppBanner(),
             SafeArea(
                 child: Padding(
                     padding: const EdgeInsets.only(
@@ -55,4 +62,5 @@ class AppBanner extends StatelessWidget{
         )
     );
   }
+
 }

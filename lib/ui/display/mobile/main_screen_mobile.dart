@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:squee_steak_flutter/model/category.dart';
 import 'package:squee_steak_flutter/ui/components/app_banner.dart';
@@ -23,11 +24,12 @@ class _StateMobileDisplay extends State<MobileDisplay>{
             height: size.height,
             alignment: Alignment.topLeft,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                AppBanner(),
+                AppBannerMobile(),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 8.0),
-                  height: size.height * 0.15,
+                  height: size.height * 0.2,
                   child: ListView.builder(
                     physics: BouncingScrollPhysics(),
                     itemCount: listCategory.length,
@@ -43,7 +45,7 @@ class _StateMobileDisplay extends State<MobileDisplay>{
                                 chosenCategory = category.name;
                               });
                             },
-                            child: ItemCategoryMobile(
+                            child: ItemCategory(
                               category: category,
                               categoryItemCount: getListCategoryItemCount(category: category.name)
                             ),
@@ -51,9 +53,6 @@ class _StateMobileDisplay extends State<MobileDisplay>{
                       );
                     },
                   )
-                ),
-                SizedBox(
-                  height: 12.0,
                 ),
                 // SectionTitle(title: 'Yummy foods at your fingertips!'),
                 MenuList(listMenu: getAllMenu(category: chosenCategory)),

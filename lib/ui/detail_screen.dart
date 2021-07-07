@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:squee_steak_flutter/model/menu.dart';
 import 'package:squee_steak_flutter/ui/display/mobile/detail_screen_mobile.dart';
 import 'package:squee_steak_flutter/util/constants.dart';
+import 'display/web/detail_screen_web.dart';
 
 class DetailScreen extends StatefulWidget{
   final Menu menu;
@@ -48,9 +49,12 @@ class _StateDetailScreen extends State<DetailScreen>{
                 menu.isLiked = !menu.isLiked;
             });
           },
-          label: Text(
-            getLabelFavorite(menu.isLiked),
-            style: TextStyle(color: Colors.white),
+          label: FittedBox(
+            fit: BoxFit.fitWidth,
+            child: Text(
+              getLabelFavorite(menu.isLiked),
+              style: TextStyle(color: Colors.white),
+            ),
           ),
           icon: getIcon(menu.isLiked),
           backgroundColor: menu.isLiked ? colorPink : colorGrey,
@@ -59,16 +63,4 @@ class _StateDetailScreen extends State<DetailScreen>{
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
-}
-
-class DetailMenuWeb extends StatelessWidget{
-  final Menu menu;
-  DetailMenuWeb({required this.menu});
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-
 }
