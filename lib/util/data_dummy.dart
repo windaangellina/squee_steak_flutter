@@ -5,8 +5,9 @@ var listCategory = [
   Category(id: 1, name: 'Steaks', urlPhoto: 'assets/icons/icons_steaks.png'),
   Category(id: 2, name: 'Side Dishes', urlPhoto: 'assets/icons/icons_side_dish.png'),
   Category(id: 3, name: 'Drinks', urlPhoto: 'assets/icons/icons_drinks.png'),
-  Category(id: 4, name: 'Chef\'s Favorite', urlPhoto: 'assets/icons/icons_chef_hat.png'),
-  Category(id: 5, name: 'Top Seller', urlPhoto: 'assets/icons/icons_top_seller.png'),
+  Category(id: 4, name: 'Recommended', urlPhoto: 'assets/icons/icons_chef_hat.png'),
+  Category(id: 5, name: 'Top Sellers', urlPhoto: 'assets/icons/icons_top_sell'
+      'er.png'),
 ];
 
 var listMenuDummy = [

@@ -20,11 +20,15 @@ const appLogoCroppedPath = "assets/logo/app_logo_cropped.png";
 // misc
 // colors
 // 0xff -> extra so the color works
-const colorYellow = Color(0xffFFE600);
-const colorPink = Color(0xffff7f92);
 const colorGrey = Color(0xff524d4e);
-const colorRedDesert = Color(0xffB74521);
 const colorWhiteCararra = Color(0xffEEEDE9);
+const colorPink = Color(0xffff7f92);
+const colorRedDesert = Color(0xffB74521);
+const colorSalmon = Color(0xffFB8D75);
+const colorSoftPink = Color(0xffFB8D75);
+const colorSoftYellow = Color(0xffFCF1CA);
+const colorOffWhite = Color(0xffFFF9E8);
+const colorYellow = Color(0xffFFE600);
 
 String getThousandSeparatorFormat(numValue){
   var numFormat = NumberFormat("#,##0.00", "en_US");
@@ -61,9 +65,14 @@ const textDetailInfoTitle = TextStyle(
     fontWeight: FontWeight.bold
 );
 const textCategoryItem = TextStyle(
-  fontSize: 12.0,
+  fontSize: 14.0,
   fontWeight: FontWeight.bold,
   color: colorWhiteCararra
+);
+const textCategoryItemCount = TextStyle(
+    fontSize: 16.0,
+    fontWeight: FontWeight.bold,
+    color: colorWhiteCararra
 );
 
 // others
@@ -101,10 +110,10 @@ List<Menu> getAllMenu({String? category}){
     return listMenuDummy;
   }
   else{
-    if(category == 'Chef\'s Favorite'){
+    if(category == 'Recommended'){
       return listMenuChefFavoriteDummy;
     }
-    else if(category == 'Top Seller'){
+    else if(category == 'Top Sellers'){
       return listMenuTopSellerDummy;
     }
     else{

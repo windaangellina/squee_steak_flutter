@@ -27,7 +27,7 @@ class _StateMobileDisplay extends State<MobileDisplay>{
                 AppBanner(),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 8.0),
-                  height: 75,
+                  height: size.height * 0.15,
                   child: ListView.builder(
                     physics: BouncingScrollPhysics(),
                     itemCount: listCategory.length,
@@ -43,7 +43,10 @@ class _StateMobileDisplay extends State<MobileDisplay>{
                                 chosenCategory = category.name;
                               });
                             },
-                            child: ItemCategoryMobile(category: category),
+                            child: ItemCategoryMobile(
+                              category: category,
+                              categoryItemCount: listCategory.length
+                            ),
                           )
                       );
                     },
