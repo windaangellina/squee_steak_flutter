@@ -23,7 +23,16 @@ const appLogoCroppedPath = "assets/logo/app_logo_cropped.png";
 const colorGrey = Color(0xff524d4e);
 const colorWhiteCararra = Color(0xffEEEDE9);
 const colorPink = Color(0xffff7f92);
+// 1st color palette
 const colorRedDesert = Color(0xffB74521);
+const colorSoftBrown = Color(0xffCD8E79);
+const colorSoftCream = Color(0xffFFE6D6);
+const colorSoftCream2 = Color(0xffffc4ab);
+const colorBabyBlue = Color(0xffD7F3FF);
+const colorBabyBlue2 = Color(0xffade3fa);
+const colorBabyBlue3 = Color(0xff94e0fc);
+const colorSoftBlue = Color(0xff80AFE1);
+// 2nd color palette
 const colorSalmon = Color(0xffFB8D75);
 const colorSoftPink = Color(0xffFB8D75);
 const colorSoftYellow = Color(0xffFCF1CA);
@@ -67,12 +76,12 @@ const textDetailInfoTitle = TextStyle(
 const textCategoryItem = TextStyle(
   fontSize: 14.0,
   fontWeight: FontWeight.bold,
-  color: colorWhiteCararra
+  color: Colors.white
 );
 const textCategoryItemCount = TextStyle(
     fontSize: 16.0,
     fontWeight: FontWeight.bold,
-    color: colorWhiteCararra
+    color: Colors.white
 );
 
 // others
@@ -122,4 +131,8 @@ List<Menu> getAllMenu({String? category}){
       ).toList();
     }
   }
+}
+
+int getListCategoryItemCount({required String category}){
+  return getAllMenu(category: category).length;
 }

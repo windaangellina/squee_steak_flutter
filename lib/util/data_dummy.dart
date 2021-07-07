@@ -1,13 +1,34 @@
 import 'package:squee_steak_flutter/model/category.dart';
 import 'package:squee_steak_flutter/model/menu.dart';
+import 'package:squee_steak_flutter/util/constants.dart';
 
 var listCategory = [
-  Category(id: 1, name: 'Steaks', urlPhoto: 'assets/icons/icons_steaks.png'),
-  Category(id: 2, name: 'Side Dishes', urlPhoto: 'assets/icons/icons_side_dish.png'),
-  Category(id: 3, name: 'Drinks', urlPhoto: 'assets/icons/icons_drinks.png'),
-  Category(id: 4, name: 'Recommended', urlPhoto: 'assets/icons/icons_chef_hat.png'),
-  Category(id: 5, name: 'Top Sellers', urlPhoto: 'assets/icons/icons_top_sell'
-      'er.png'),
+  Category(
+      id: 1,
+      name: 'Steaks',
+      urlPhoto: 'assets/icons/icons_steaks.png',
+      backgroundColor: colorSalmon
+  ),
+  Category(
+      id: 2, name: 'Side Dishes',
+      urlPhoto: 'assets/icons/icons_side_dish.png',
+      backgroundColor: colorSoftBrown
+  ),
+  Category(
+      id: 3, name: 'Drinks',
+      urlPhoto: 'assets/icons/icons_drinks.png',
+      backgroundColor: colorSoftCream2
+  ),
+  Category(
+      id: 4, name: 'Recommended',
+      urlPhoto: 'assets/icons/icons_chef_hat.png',
+      backgroundColor: colorBabyBlue3
+  ),
+  Category(
+      id: 5, name: 'Top Sellers',
+      urlPhoto: 'assets/icons/icons_top_seller.png',
+      backgroundColor: colorSoftBlue
+  ),
 ];
 
 var listMenuDummy = [

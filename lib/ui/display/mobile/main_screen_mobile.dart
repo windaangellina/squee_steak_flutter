@@ -45,7 +45,7 @@ class _StateMobileDisplay extends State<MobileDisplay>{
                             },
                             child: ItemCategoryMobile(
                               category: category,
-                              categoryItemCount: listCategory.length
+                              categoryItemCount: getListCategoryItemCount(category: category.name)
                             ),
                           )
                       );

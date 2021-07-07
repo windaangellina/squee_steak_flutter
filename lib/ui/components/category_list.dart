@@ -16,7 +16,7 @@ class ItemCategoryMobile extends StatelessWidget{
       padding: EdgeInsets.all(6.0),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-          color: colorRedDesert,
+          color: category.backgroundColor == null ? colorRedDesert : category.backgroundColor,
           borderRadius: BorderRadius.all(Radius.circular(20)),
       ),
       child: Column(

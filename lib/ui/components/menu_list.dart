@@ -14,7 +14,6 @@ class MenuList extends StatelessWidget{
       child: ListView.builder(
         physics: BouncingScrollPhysics(),
         itemCount: listMenu.length,
-        padding: EdgeInsets.only(bottom: 64.0),
         itemBuilder: (context, index){
           final Menu menu = listMenu[index];
           return InkWell(
@@ -46,7 +45,7 @@ class ItemMenuMobile extends StatelessWidget{
           borderRadius: BorderRadius.all(Radius.circular(20)),
           boxShadow: [
             BoxShadow(
-                color: Colors.grey.withOpacity(0.7),
+                color: Colors.grey.withOpacity(0.3),
                 offset: Offset(0,0),
                 blurRadius: 5
             )
